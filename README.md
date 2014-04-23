@@ -1,3 +1,3 @@
 openKindergardenHH
 ==================
-Test - Andreas
+*Test* - Andreas & Lukasz
