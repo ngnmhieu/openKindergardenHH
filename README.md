@@ -1,3 +1,3 @@
 openKindergardenHH
 ==================
-*Test* - Andreas & Lukasz
+*Test* - Andreas & Lukasz & Timo
