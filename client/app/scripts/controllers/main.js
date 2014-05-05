@@ -5,7 +5,7 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
   angular.extend($scope, {
     defaults: {
       tileLayer: 'http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png',
-      maxZoom: 14,
+      maxZoom: 20,
       path: {
         weight: 10,
         color: '#800000',
@@ -17,6 +17,12 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
       lat: 53.33,
       lng: 10.0,
       zoom: 9
+    },
+    events: {
+      map: {
+        enable: ['click'],
+        logic: 'emit'
+      }
     }
   });
 
@@ -35,5 +41,9 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
         }
       }
     });
+  });
+
+  $scope.$on('leafletDirectiveMap.geojsonClick', function(selected, event){
+    console.log(event);
   });
 });
