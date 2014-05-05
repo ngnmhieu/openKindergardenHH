@@ -1,0 +1,14 @@
+{
+  "cache": { "name": "Test" },
+  "layers":
+  {
+    "kitas":
+    {
+      "provider":
+      {
+        "name": "mbtiles", 
+        "tileset": "/var/www/tiles/demoArchiv_93be53.mbtiles"
+      }
+    }
+  }
+}
