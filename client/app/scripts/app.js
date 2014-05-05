@@ -3,7 +3,8 @@
 angular.module('clientApp', [
   'ngResource',
   'ngSanitize',
-  'ngRoute'
+  'ngRoute',
+  'leaflet-directive'
 ])
   .config(function ($routeProvider) {
     $routeProvider

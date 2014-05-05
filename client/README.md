@@ -13,3 +13,4 @@ Client start:
 ### Tech stack
  - AngularJS
  - mapbox.js
+ - http://tombatossals.github.io/angular-leaflet-directive/#!/examples/geojson
