@@ -1,11 +1,6 @@
 'use strict';
 
 angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
-  $scope.awesomeThings = [
-    'HTML5 Boilerplate',
-    'AngularJS',
-    'Karma'
-  ];
 
   angular.extend($scope, {
     defaults: {
@@ -26,14 +21,13 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
   });
 
   // Get the countries geojson data from a JSON
-  $http.get('kindergarten_hamburg.geojson').success(function(data, status) {
-    console.log(data)
+  $http.get('kindergarten_hamburg.geojson').success(function(data) {
     angular.extend($scope, {
       geojson: {
         data: data,
         style: {
-          fillColor: "black",
-          weight: 2,
+          fillColor: 'black',
+          weight: 1,
           opacity: 1,
           color: 'white',
           dashArray: '3',
