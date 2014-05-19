@@ -1,0 +1,18 @@
+@fonts: "Ubuntu Regular","Arial Regular","DejaVu Sans Book";
+
+@white: #fff;
+@darkGrey: #444;
+@waterText: #6699cc;
+
+@motorway: #ff5600;
+@trunk: @motorway;
+@primary: #ff9900;
+@secondary: @primary;
+@road: #aaa;
+@track: @road;
+@footway: #bbb;
+@cycleway: @footway;
+
+@water: #c0d8ff;
+@forest: #cea;
+@park: @forest;

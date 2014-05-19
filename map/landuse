@@ -1,0 +1,381 @@
+@forest: #a0cf85;
+@grass: #cfeca8; //also meadow, common, garden, village_green, conservation
+@golf_course: #b5e3b5;
+@natural: #c6e4b4; //also grassland
+@park: #b6fdb6; //also recreation_ground
+@wood: #aed1a0;
+@vineyard: #abdf96;
+
+@land: #fff9ea;
+@military: #a1b29a;
+@themepark: #734a08;
+@airport: #778899;
+
+@stadium: #cdc673; //also sports_centre
+@track: #74dcba;
+@pitch: #8ad3af;
+
+@aerodrome: @airport;
+@apron: @airport;
+@allotments: #e5c7ab;
+@attraction: #f2caea;
+@barracks: @military;
+@campsite: #ccff99; //also caravan_site, picnic_site
+@cemetery: #aacbaf; //also grave_yard
+@construction: #9d9d6c;
+@commercial: #fbfbf0;
+@dangerArea: @military;
+@desert: #ffdf88;
+@field: @grass;
+@garages: #996;
+@heath: @grass;
+@hospital: #f00;
+@industrial: @commercial; //also railway
+@farmyard: #ddbf92;
+@farm: @farmyard; //also farmland
+@parking: #f7efb7;
+@playground: #d56900;
+@power: #bbb;
+@restArea: #efc8c8; //also services
+@retail: @commercial;
+@residential: #f5f5dc;
+@sand: @desert;
+@school: #f0f0d8; //also university, college, kindergarden
+
+#landuse {
+  /* Schwimmbecken */
+  [type = 'swimming_pool'][zoom >= 14] {
+    polygon-fill: @water;
+    line-color: #f00;
+    line-width: 0.5;
+  }
+
+  /* Kinderspielplatz */
+  [type = 'playground'][zoom >= 13] {
+    polygon-fill: @playground;
+    line-color: #666;
+    line-width: 0.3;
+  }
+
+  /* Campingplatz, Rastplatz */
+  [type = 'camp_site'],
+  [type = 'caravan_site'],
+  [type = 'picnic_site'] {
+    [zoom >= 13] {
+      polygon-fill: @campsite;
+      polygon-opacity: 0.5;
+      line-color: #666;
+      line-width: 0.3;
+    }
+  }
+
+  /* Touristenattraktion */
+  [type = 'attraction'][zoom >= 11] {
+    polygon-fill: @attraction;
+  }
+
+  /* Steinbruch */
+  [type = 'landuse_quarry'][zoom >= 11] {
+    line-width: 0.5;
+    line-color: grey;
+  }
+
+  /* Weinberg */
+  [type = 'vineyard'] {
+    [zoom >= 11][zoom < 13] {
+      polygon-fill: @vineyard;
+    }
+  }
+
+  /* Friedhof */
+  [type = 'cemetery'],
+  [type = 'grave_yard'],
+  [type = 'grave_yard'] {
+    [zoom >= 11][zoom < 14] {
+      polygon-fill: @cemetery;
+    }
+  }
+
+  /* Wohngebiet */
+  [type = 'residential'][zoom >= 11] {
+    polygon-fill: @residential;
+  }
+
+  /* Garagen */
+  [type = 'garages'][zoom >= 12] {
+    polygon-fill: @garages;
+    polygon-opacity: 0.2;
+  }
+
+  /* Kaserne */
+  [type = 'military_barracks'][zoom >= 11] {
+    polygon-fill: @barracks;
+  }
+
+  /* Feld, Acker */
+  [type = 'field'] {
+    [zoom >= 11] {
+      polygon-fill: lighten(@field, 10);
+      polygon-opacity: 0.2;
+      
+      [zoom >= 14] {
+        line-width: 0.3;
+        line-opacity: 0.4;
+        line-color: lighten(@field, 20);
+      }
+    }
+  }
+
+  /* Gefahrenbereich */
+  [type = 'danger_area'] {
+    [zoom >= 11] {
+      polygon-fill: @dangerArea;
+      polygon-opacity: 0.3;
+    }
+  }
+
+  /* Wiese, Gras */
+  [type = 'meadow'],
+  [type = 'grass'] {
+    [zoom >= 11] {
+      polygon-fill: @grass;
+    }
+  }
+
+  [type = 'leisure_park'],
+  [type = 'leisure_recreation_ground'] {
+    [zoom >= 11] {
+      polygon-fill: @park;
+      polygon-opacity: 0.6;
+    }
+  }
+
+  [type = 'common'],
+  [type = 'garden'] {
+    [zoom >= 11] {
+      polygon-fill: @grass;
+    }
+  }
+
+  [type = 'golf_course'][zoom >= 11] {
+    polygon-fill: @golf_course;
+  }
+
+  [type = 'allotments'] {
+    [zoom >= 11][zoom < 14] {
+      polygon-fill: @allotments;
+    }
+  }
+
+  /* Forstwirtschaftliche Fläche */
+  [type = 'forest'] {
+    [zoom >= 11] {
+      polygon-fill: @forest;
+    }
+  }
+
+  [type = 'farmyard'][zoom >= 11] {
+    polygon-fill: @farmyard;
+  }
+
+  [type = 'farm'],
+  [type = 'farmland'] {
+    [zoom >= 9] {
+      polygon-fill: @farm;
+    }
+  }
+
+  [type = 'recreation_ground'],
+  [type = 'conservation'] {
+    [zoom >= 10] {
+      polygon-fill: @grass;
+    }
+  }
+
+  [type = 'village_green'][zoom >= 11] {
+    polygon-fill: @grass;
+  }
+
+  [type = 'retail'][zoom >= 11] {
+    polygon-fill: @retail;
+  }
+
+  [type = 'industrial'],
+  [type = 'railway'] {
+    [zoom >= 11] {
+      polygon-fill: @industrial;
+    }
+  }
+
+  [type = 'station'],
+  [type = 'generator'] {
+    [zoom >= 11] {
+      polygon-fill: @power;
+      
+      [zoom >= 12] {
+        line-width: 0.4;
+        line-color: #555;
+      }
+    }
+  }
+
+  [type = 'sub_station'][zoom >= 13] {
+    polygon-fill: @power;
+    line-width: 0.4;
+    line-color: #555;
+  }
+
+  [type = 'commercial'][zoom >= 11] {
+    polygon-fill: @commercial;
+  }
+
+  [type = 'landfill'],
+  [type = 'greenfield'],
+  [type = 'brownfield'],
+  [type = 'construction'] {
+    [zoom >= 11] {
+      polygon-fill: @construction;
+      polygon-opacity: 0.7;
+    }
+  }
+
+  /* Wald */
+  [type = 'wood'] {
+    [zoom >= 11] {
+      polygon-fill: @wood;
+    }
+  }
+
+  /* Wüste */
+  [type = 'desert'][zoom >= 11] {
+    polygon-fill: @desert;
+  }
+
+  /* Sand */
+  [type = 'sand'][zoom >= 11] {
+    polygon-fill: @sand;
+  }
+
+  /* Heidelandschaft */
+  [type = 'heath'][zoom >= 11] {
+    polygon-fill: @heath;
+  }
+
+  /* Wiese */
+  [type = 'grassland'][zoom >= 11] {
+    polygon-fill: @grass;
+  }
+
+  /* Gestrüpp */
+  [type = 'scrub'] {
+    [zoom >= 11][zoom < 14] {
+      polygon-fill: lighten(@forest, 20);
+    }
+  }
+
+  [type = 'school'],
+  [type = 'college'],
+  [type = 'hospital'],
+  [type = 'university'],
+  [type = 'kindergarten'] {
+    [zoom >= 11] {
+      polygon-fill: @school;
+      
+      [zoom >= 12] {
+        line-width: 0.3;
+        line-color: brown;
+      }
+    }
+  }
+
+  /* Parkplatz */
+  [type = 'parking'][zoom >= 11] {
+    polygon-fill: @parking;
+    
+    [zoom >= 15] {
+      line-color: @parking;
+      line-width: 0.3;
+    }
+  }
+
+  /* Vorfeldfläche */
+  [type = 'apron'][zoom >= 12] {
+    polygon-fill: @apron;
+  }
+
+  /* Flugplatz */
+  [type = 'aerodrome'][zoom >= 12] {
+    polygon-fill: @aerodrome;
+    polygon-opacity: 0.2;
+    line-width: 0.2;
+    line-color: #555;
+  }
+
+  [type = 'services'],
+  [type = 'rest_area'] {
+    [zoom >= 14] {
+      polygon-fill: @restArea;
+    }
+  }
+}
+
+#landuse::overlay {
+  /* Spielfeld */
+  [type = 'sports_centre'],
+  [type = 'stadium'],
+  [type = 'pitch'] {
+    [zoom >= 11] {
+      polygon-fill: @stadium;
+    }
+  }
+
+  /* Pfad */
+  [type = 'track'][zoom >= 11] {
+    polygon-fill: @track;
+    line-color: #888;
+    line-width: 0.5;
+  }
+  
+  /* Militärwesen */
+  [type = 'military'][zoom >= 11]::landuse {
+    polygon-fill: lighten(@military, 20);
+  }
+  
+  /* Freizeitpark */
+  [type = 'theme_park'][zoom >= 13] {
+    line-color: @themepark;
+    line-dasharray: 9,3;
+    line-opacity: 0.6;
+    line-width: 1.5;
+    
+    [zoom >= 15] {
+      line-width: 2.5;
+    }
+  }
+  
+  /* Naturgebiet */
+  [type = 'reserve'][zoom >= 11] {
+    line-color: @grass;
+    line-width: 0.5;
+    
+    [zoom >= 14] {
+      line-width: 1;
+    }
+  }
+  
+  [zoom >= 16] {    
+    /* Hecke */
+    [type = 'hedge'] {
+      line-color: darken(@forest, 10);
+      polygon-fill: @wood;
+      line-width: 0.4;
+    }
+    
+    /* Böschung */
+    [type = 'embankment'] {
+      line-color: @darkGrey;
+      polygon-fill: @wood;
+      line-width: 0.4;
+    }
+  }
+}
