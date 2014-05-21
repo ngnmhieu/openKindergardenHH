@@ -2,17 +2,54 @@
 
 @white: #fff;
 @darkGrey: #444;
-@waterText: #6699cc;
 
-@motorway: #ff5600;
-@trunk: @motorway;
-@primary: #ff9900;
-@secondary: @primary;
-@road: #aaa;
-@track: @road;
+@airport: #778899;
+@construction: #9d9d6c;
+@cemetery: #aacbaf; //grave_yard
+@commercial: #fbfbf0;
+@desert: #ffdf88;
+@farmyard: #eccb9d;
+@forest: #a0cf85;
 @footway: #bbb;
-@cycleway: @footway;
-
+@grass: #cfeca8; //meadow, common, garden, village_green, conservation
+@hospital: #f00;
+@land: #fff9ea;
+@military: #a1b29a;
+@motorway: #ff5600;
+@natural: #c6e4b4; //grassland
+@park: #b6fdb6; //recreation_ground
+@parking: #f7efb7;
+@primary: #ff9900;
+@residential: #f5f5dc;
+@road: #aaa;
+@school: #f0f0d8; //university, college, kindergarden
+@stadium: #cdc673; //sports_centre
+@themepark: #734a08;
 @water: #c0d8ff;
-@forest: #cea;
-@park: @forest;
+@waterText: #6699cc;
+@wood: #aed1a0;
+
+@aerodrome: @airport;
+@apron: @airport;
+@allotments: @farmyard;
+@attraction: @themepark;
+@barracks: @military;
+@campsite: @grass; //caravan_site, picnic_site
+@cycleway: @footway;
+@dangerArea: @military;
+@farm: @farmyard; //farmland
+@field: @grass;
+@garages: @parking;
+@golfCourse: @grass;
+@heath: @grass;
+@industrial: @commercial; //also railway
+@playground: @park;
+@pitch: @stadium;
+@power: @parking;
+@restArea: @parking; //services
+@retail: @commercial;
+@sand: @desert;
+@secondary: @primary;
+@track: @wood;
+@trunk: @motorway;
+@vineyard: @grass;
