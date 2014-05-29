@@ -19,8 +19,10 @@
 @natural: #c6e4b4; //grassland
 @park: #b6fdb6; //recreation_ground
 @parking: #f7efb7;
+@placeOfWorship: #eca49e; //Andachtsstätte
 @primary: #ff9900;
-@residential: #f5f5dc;
+@railway: #f7f7f7; //Eisenbahn
+@residential: #f7f7e6;
 @road: #aaa;
 @school: #f0f0d8; //university, college, kindergarden
 @stadium: #cdc673; //sports_centre
@@ -31,25 +33,40 @@
 
 @aerodrome: @airport;
 @apron: @airport;
-@allotments: @farmyard;
+@allotments: @forest;
 @attraction: @themepark;
 @barracks: @military;
+@basin: @water;
+@buildingSite: @land; //Baugelände
 @campsite: @grass; //caravan_site, picnic_site
 @cycleway: @footway;
 @dangerArea: @military;
 @farm: @farmyard; //farmland
 @field: @grass;
+@garden: @grass; //Garten
 @garages: @parking;
 @golfCourse: @grass;
+@greenfield: @grass;
+@greenhouse: @field; //Treibhaus
+@harbour: @water; //Hafen
 @heath: @grass;
 @industrial: @commercial; //also railway
+@observatory: @park; //Sternwarte
+@orchard: @grass; //Obstplantage
+@parish: @placeOfWorship; //Gemeinde
 @playground: @park;
 @pitch: @stadium;
+@plantNursery: @farmyard; //Gärtnerei
 @power: @parking;
+@provingGround: @parking; //Verkehrsübungsplatz
+@quarry: @land; //Steinbruch
+@recreationGround: @park;
+@reservoir: @water;
 @restArea: @parking; //services
 @retail: @commercial;
 @sand: @desert;
 @secondary: @primary;
 @track: @wood;
 @trunk: @motorway;
+@villageGreen: @grass; //Dorfwiese
 @vineyard: @grass;

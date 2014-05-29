@@ -26,6 +26,7 @@
   "Stylesheet": [
     "settings",
     "roads",
+    "railways",
     "natural",
     "water",
     "landuse"
@@ -93,6 +94,27 @@
       "srs": "",
       "advanced": {},
       "name": "waterways"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        9.7008517,
+        53.4035779,
+        10.3083063,
+        53.7718068
+      ],
+      "id": "railways",
+      "class": "",
+      "Datasource": {
+        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\hamburg-latest.shp\\railways.shp",
+        "id": "railways",
+        "project": "kindergardenMap",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "railways"
     },
     {
       "geometry": "linestring",

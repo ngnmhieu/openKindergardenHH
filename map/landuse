@@ -1,13 +1,18 @@
 #landuse {
   /* Schwimmbecken */
+  [type = 'basin'],
+  [type = 'harbour'],
+  [type = 'reservoir'],
   [type = 'swimming_pool'] {
-    [zoom >= 14] {
+    [zoom >= 11] {
       polygon-fill: @water;
     }
   }
 
   /* Kinderspielplatz */
-  [type = 'playground'] {
+  [type = 'playground'],
+  [type = 'recreation_groun'],
+  [type = 'recreation_ground'] {
     [zoom >= 13] {
       polygon-fill: @playground;
       line-color: @darkGrey;
@@ -34,6 +39,21 @@
     }
   }
 
+  /* Baugelände */
+  [type = 'building_site'] {
+    [zoom >= 11] {
+      polygon-fill: @buildingSite;
+    }
+  }
+
+  /* Gemeinde, Andachtsstätte */
+  [type = 'parish'],
+  [type = 'place_of_worship'] {
+    [zoom >= 11] {
+      polygon-fill: @placeOfWorship;
+    }
+  }
+
   /* Steinbruch */
   [type = 'landuse_quarry'] {
     [zoom >= 11] {
@@ -51,7 +71,6 @@
 
   /* Friedhof */
   [type = 'cemetery'],
-  [type = 'grave_yard'],
   [type = 'grave_yard'] {
     [zoom >= 11] {
       polygon-fill: @cemetery;
@@ -80,8 +99,10 @@
     }
   }
 
-  /* Feld, Acker */
-  [type = 'field'] {
+  /* Feld, Acker, Treibhaus */
+  [type = 'field'],
+  [type = 'greenhouse_horti'],
+  [type = 'greenhouse_horticulture'] {
     [zoom >= 11] {
       polygon-fill: lighten(@field, 10);
       polygon-opacity: 0.2;
@@ -102,19 +123,30 @@
     }
   }
 
-  /* Wiese, Gras */
+  /* Gras, Wiese, Obstplantage */
+  [type = 'grass'],
   [type = 'meadow'],
-  [type = 'grass'] {
+  [type = 'orchard'],
+  [type = 'village_green'] {
     [zoom >= 11] {
       polygon-fill: @grass;
     }
   }
 
-  [type = 'leisure_park'],
-  [type = 'leisure_recreation_ground'] {
+  /* Park, Freizeitgelände */
+  [type = 'park'],
+  [type = 'recreation_ground'] {
     [zoom >= 11] {
       polygon-fill: @park;
       polygon-opacity: 0.6;
+    }
+  }
+
+  /* Sternwarte */
+  [type = 'observatory'] {
+    [zoom >= 11] {
+      polygon-fill: @observatory;
+      polygon-opacity: 0.2;
     }
   }
 
@@ -126,13 +158,17 @@
     }
   }
 
-  [type = 'golf_course'][zoom >= 11] {
-    polygon-fill: @golfCourse;
+  [type = 'golf_course'] {
+    [zoom >= 11] {
+      polygon-fill: @golfCourse;
+    }
   }
 
+  /* Garten, Schrebergarten */
+  [type = 'garden'],
   [type = 'allotments'] {
-    [zoom >= 11][zoom < 14] {
-      polygon-fill: @allotments;
+    [zoom >= 11] {
+      polygon-fill: lighten(@allotments, 10);
     }
   }
 
@@ -143,8 +179,12 @@
     }
   }
 
-  [type = 'farmyard'][zoom >= 11] {
-    polygon-fill: @farmyard;
+  /* Hof, Gärtnerei */
+  [type = 'farmyard'],
+  [type = 'plant_nursery'] {
+    [zoom >= 11] {
+      polygon-fill: @farmyard;
+    }
   }
 
   [type = 'farm'],
@@ -167,16 +207,23 @@
     }
   }
 
+  /* Einzelhandel */
   [type = 'retail'] {
 	[zoom >= 11] {
       polygon-fill: @retail;
     }
   }
 
-  [type = 'industrial'],
-  [type = 'railway'] {
+  [type = 'industrial'] {
     [zoom >= 11] {
       polygon-fill: @industrial;
+    }
+  }
+
+  /* Eisenbahn */
+  [type = 'railway'] {
+    [zoom >= 11] {
+      polygon-fill: @railway;
     }
   }
 
@@ -240,7 +287,8 @@
   }
 
   /* Sand */
-  [type = 'sand'] {
+  [type = 'sand'],
+  [type = 'FKK-Bereich'] {
     [zoom >= 11] {
       polygon-fill: @sand;
     }
@@ -254,8 +302,10 @@
   }
 
   /* Wiese */
-  [type = 'grassland'][zoom >= 11] {
-    polygon-fill: @grass;
+  [type = 'grassland'] {
+    [zoom >= 11] {
+      polygon-fill: @grass;
+    }
   }
 
   /* Gestrüpp */
@@ -265,9 +315,21 @@
     }
   }
 
+  /* Andachtsstätte */
+  [type = 'place_of_worship'] {
+    [zoom >= 11] {
+      polygon-fill: @placeOfWorship;
+    }
+  }
+
+  [type = 'hospital'] {
+    [zoom >= 11] {
+      polygon-fill: @hospital;
+    }
+  }
+
   [type = 'school'],
   [type = 'college'],
-  [type = 'hospital'],
   [type = 'university'],
   [type = 'kindergarten'] {
     [zoom >= 11] {
@@ -342,14 +404,16 @@
   }
   
   /* Freizeitpark */
-  [type = 'theme_park'][zoom >= 13] {
-    line-color: @themepark;
-    line-dasharray: 9,3;
-    line-opacity: 0.6;
-    line-width: 1.5;
-    
-    [zoom >= 15] {
-      line-width: 2.5;
+  [type = 'theme_park'] {
+    [zoom >= 13] {
+      line-color: @themepark;
+      line-dasharray: 9,3;
+      line-opacity: 0.6;
+      line-width: 1.5;
+      
+      [zoom >= 15] {
+        line-width: 2.5;
+      }
     }
   }
   
