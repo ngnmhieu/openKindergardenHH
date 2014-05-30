@@ -1,6 +1,6 @@
 #railways {
   [zoom > 11] {
-    line-color: darken(@railway, 50);
+    line-color: darken(@railway, 80);
     line-dasharray: 5,2;
     line-width: 0.2;
     

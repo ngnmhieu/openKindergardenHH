@@ -12,13 +12,14 @@
   ],
   "format": "png",
   "interactivity": {
-    "layer": "landuse",
+    "layer": "buildings",
     "template_teaser": "{{{osm_id}}} {{{name}}} {{{type}}}",
     "fields": [
       "osm_id",
       "name",
       "type"
-    ]
+    ],
+    "template_full": "{{{osm_id}}} {{{name}}} {{{type}}}"
   },
   "minzoom": 16,
   "maxzoom": 16,
@@ -29,7 +30,8 @@
     "railways",
     "natural",
     "water",
-    "landuse"
+    "landuse",
+    "buildings"
   ],
   "Layer": [
     {
@@ -136,6 +138,24 @@
       "srs": "",
       "advanced": {},
       "name": "roads"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        9.6484614,
+        53.3857021,
+        10.3307183,
+        53.742443
+      ],
+      "id": "buildings",
+      "class": "",
+      "Datasource": {
+        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\hamburg-latest.shp\\buildings.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "buildings"
     }
   ],
   "scale": 1,

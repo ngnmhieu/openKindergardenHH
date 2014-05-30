@@ -4,24 +4,26 @@
 @darkGrey: #444;
 
 @airport: #778899;
-@construction: #9d9d6c;
+@building: #555;
+@construction: #d2d2bb;
 @cemetery: #aacbaf; //grave_yard
 @commercial: #fbfbf0;
 @desert: #ffdf88;
 @farmyard: #eccb9d;
 @forest: #a0cf85;
-@footway: #bbb;
+@footway: #ccc;
 @grass: #cfeca8; //meadow, common, garden, village_green, conservation
-@hospital: #f00;
+@ground: #fafafa;
+@hospital: #c66c65;
 @land: #fff9ea;
 @military: #a1b29a;
-@motorway: #ff5600;
+@motorway: #ff7732;
 @natural: #c6e4b4; //grassland
-@park: #b6fdb6; //recreation_ground
+@park: #cffecf; //recreation_ground
 @parking: #f7efb7;
-@placeOfWorship: #eca49e; //Andachtsstätte
-@primary: #ff9900;
-@railway: #f7f7f7; //Eisenbahn
+@placeOfWorship: #f9e3e1; //Andachtsstätte
+@primary: #ffcc80;
+@railway: #fdfdfd; //Eisenbahn
 @residential: #f7f7e6;
 @road: #aaa;
 @school: #f0f0d8; //university, college, kindergarden
@@ -37,7 +39,8 @@
 @attraction: @themepark;
 @barracks: @military;
 @basin: @water;
-@buildingSite: @land; //Baugelände
+@bridleway: @road;
+@buildingSite: @construction; //Baugelände
 @campsite: @grass; //caravan_site, picnic_site
 @cycleway: @footway;
 @dangerArea: @military;
@@ -51,13 +54,17 @@
 @harbour: @water; //Hafen
 @heath: @grass;
 @industrial: @commercial; //also railway
+@livingStreet: @road;
+@motorwayLink: @motorway;
 @observatory: @park; //Sternwarte
 @orchard: @grass; //Obstplantage
 @parish: @placeOfWorship; //Gemeinde
+@pedestrian: @road;
 @playground: @park;
 @pitch: @stadium;
 @plantNursery: @farmyard; //Gärtnerei
 @power: @parking;
+@primaryLink: @primary;
 @provingGround: @parking; //Verkehrsübungsplatz
 @quarry: @land; //Steinbruch
 @recreationGround: @park;
@@ -66,7 +73,14 @@
 @retail: @commercial;
 @sand: @desert;
 @secondary: @primary;
+@secondaryLink: @primary;
+@service: @road;
+@steps: @road;
+@tertiary: @road;
+@tertiaryLink: @road;
 @track: @wood;
 @trunk: @motorway;
+@trunkLink: @motorway;
+@unclassified: @road;
 @villageGreen: @grass; //Dorfwiese
 @vineyard: @grass;
