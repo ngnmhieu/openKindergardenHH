@@ -1,0 +1,22 @@
+#aeroways::fill {
+  line-color: lighten(@aeroways, 25);
+  line-join: round;
+  line-cap: butt;
+  
+  [aeroway = 'runway'] {
+  	line-color: lighten(@runway, 25);
+  	line-cap: square;
+    
+    [zoom = 16] {
+  	  line-width: 28;
+    }
+  }
+  
+  [aeroway = 'taxiway'] {
+  	line-color: lighten(@taxiway, 25);
+    
+    [zoom = 16] {
+  	  line-width: 5;
+    }
+  }
+}

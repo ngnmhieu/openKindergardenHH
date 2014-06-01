@@ -3,7 +3,6 @@
 @white: #fff;
 @darkGrey: #444;
 
-@airport: #778899;
 @building: #555;
 @construction: #d2d2bb;
 @cemetery: #aacbaf; //grave_yard
@@ -19,7 +18,7 @@
 @military: #a1b29a;
 @motorway: #ff7732;
 @natural: #c6e4b4; //grassland
-@park: #cffecf; //recreation_ground
+@park: #c2f7b0; //recreation_ground
 @parking: #f7efb7;
 @placeOfWorship: #f9e3e1; //Andachtsstätte
 @primary: #ffcc80;
@@ -30,11 +29,12 @@
 @stadium: #cdc673; //sports_centre
 @themepark: #734a08;
 @water: #c0d8ff;
-@waterText: #6699cc;
+@waterText: #168;
 @wood: #aed1a0;
 
-@aerodrome: @airport;
-@apron: @airport;
+@apron: @building;
+@aerodrome: @building;
+@aeroways: @road;
 @allotments: @forest;
 @attraction: @themepark;
 @barracks: @military;
@@ -71,11 +71,13 @@
 @reservoir: @water;
 @restArea: @parking; //services
 @retail: @commercial;
+@runway: @road;
 @sand: @desert;
 @secondary: @primary;
 @secondaryLink: @primary;
 @service: @road;
 @steps: @road;
+@taxiway: @road;
 @tertiary: @road;
 @tertiaryLink: @road;
 @track: @wood;
