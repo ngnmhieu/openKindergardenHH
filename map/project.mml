@@ -6,8 +6,8 @@
     53.7412
   ],
   "center": [
-    9.8361,
-    53.538,
+    9.8423,
+    53.5386,
     16
   ],
   "format": "png",
@@ -125,6 +125,27 @@
       "name": "railways"
     },
     {
+      "geometry": "polygon",
+      "extent": [
+        9.8153858,
+        53.5301602,
+        10.0066614,
+        53.6351194
+      ],
+      "id": "aerowaypolygons",
+      "class": "",
+      "Datasource": {
+        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\aeroways\\aeroways_polygons.shp",
+        "id": "aerowaypolygons",
+        "project": "kindergardenMap",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "aerowaypolygons"
+    },
+    {
       "geometry": "linestring",
       "extent": [
         9.813432,
@@ -132,15 +153,39 @@
         10.0058623,
         53.6548454
       ],
-      "id": "aeroways",
+      "id": "aerowaylines",
       "class": "",
       "Datasource": {
-        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\aeroways\\aeroways.shp"
+        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\aeroways\\aeroways_lines.shp",
+        "id": "aerowaylines",
+        "project": "kindergardenMap",
+        "srs": ""
       },
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "aeroways"
+      "name": "aerowaylines"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        9.9023535,
+        53.5523396,
+        10.0366184,
+        53.6243289
+      ],
+      "id": "aerowaypoints",
+      "class": "",
+      "Datasource": {
+        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\aeroways\\aeroways_points.shp",
+        "id": "aerowaypoints",
+        "project": "kindergardenMap",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "aerowaypoints"
     },
     {
       "geometry": "linestring",

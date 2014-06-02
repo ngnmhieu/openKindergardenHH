@@ -32,7 +32,7 @@
 @waterText: #168;
 @wood: #aed1a0;
 
-@apron: @building;
+@apron: @road;
 @aerodrome: @building;
 @aeroways: @road;
 @allotments: @forest;
@@ -53,6 +53,7 @@
 @greenhouse: @field; //Treibhaus
 @harbour: @water; //Hafen
 @heath: @grass;
+@helipad: @road;
 @industrial: @commercial; //also railway
 @livingStreet: @road;
 @motorwayLink: @motorway;
