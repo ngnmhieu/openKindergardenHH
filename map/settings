@@ -7,7 +7,7 @@
 @construction: #d2d2bb;
 @cemetery: #aacbaf; //grave_yard
 @commercial: #fbfbf0;
-@desert: #ffdf88;
+@desert: #ecdeb7;
 @farmyard: #eccb9d;
 @forest: #a0cf85;
 @footway: #ccc;
@@ -81,6 +81,7 @@
 @tertiary: @road;
 @tertiaryLink: @road;
 @track: @wood;
+@trackWay: @road;
 @trunk: @motorway;
 @trunkLink: @motorway;
 @unclassified: @road;

@@ -6,8 +6,8 @@
     53.7412
   ],
   "center": [
-    9.9931,
-    53.6344,
+    9.8361,
+    53.538,
     16
   ],
   "format": "png",
@@ -127,18 +127,15 @@
     {
       "geometry": "linestring",
       "extent": [
-        9.9638774,
-        53.6166196,
+        9.813432,
+        53.5249393,
         10.0058623,
         53.6548454
       ],
       "id": "aeroways",
       "class": "",
       "Datasource": {
-        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\airports\\OGRGeoJSON.shp",
-        "id": "aeroways",
-        "project": "kindergardenMap",
-        "srs": ""
+        "file": "C:\\Users\\Mr. Wendelken\\Downloads\\aeroways\\aeroways.shp"
       },
       "srs-name": "autodetect",
       "srs": "",
