@@ -14,9 +14,9 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
     },
     // 53° 33' 0" N / 10° 0' 0" E
     center: {
-      lat: 53.33,
+      lat: 53.6,
       lng: 10.0,
-      zoom: 9
+      zoom: 10
     },
     events: {
       map: {
