@@ -16,7 +16,7 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
     center: {
       lat: 53.6,
       lng: 10.0,
-      zoom: 10
+      zoom: 11
     },
     events: {
       map: {
@@ -25,6 +25,29 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
       }
     }
   });
+  
+  function generateTemplate(kita){
+    var tmpl = '<div>';
+    
+    if (kita.website !== undefined){
+      tmpl += '<a href="' + kita.website + '" target="blank">' + kita.name + '</a></br>';
+    } else{
+      tmpl +=  '<b>' + kita.name + '</b></br>';
+    }
+    
+    tmpl += '<u>Träger</u>: ' + kita.operator + '</br>';
+    
+    if (kita.email !== undefined && kita.contact !== undefined){
+      tmpl += '<u>Ansprechpartner</u>: <a href="mailto:' + kita.email + '">' + kita.contact + '</a>';
+    }
+    if (kita.phone !== undefined) {
+      tmpl += ' (' + kita.phone + ')';
+    }
+    
+    tmpl += '</div>';
+    return tmpl;
+  }
+
 
   // Get the countries geojson data from a JSON
   $http.get('kindergarten_hamburg.geojson').success(function(data) {
@@ -38,12 +61,17 @@ angular.module('clientApp').controller('MainCtrl', function ($scope, $http) {
           color: 'white',
           dashArray: '3',
           fillOpacity: 0.7
+        },
+        onEachFeature: function (feature, layer) {
+          layer.bindPopup(generateTemplate(feature.properties));
         }
       }
     });
   });
 
+  // gets blocked by onEachFeature binding popupshow to onclick
   $scope.$on('leafletDirectiveMap.geojsonClick', function(selected, event){
     console.log(event);
+	
   });
 });
